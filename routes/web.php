@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/export', [App\Http\Controllers\HomeController::class, 'export'])->name('export');
 Route::get('/down', [App\Http\Controllers\HomeController::class, 'exportExcel'])->name('downExcel');
-
+Route::post('/searchNuld', [App\Http\Controllers\search\SearchController::class, 'searchNuld'])->name('searchNuld');
 Auth::routes();
 
 Route::get('/uld', [App\Http\Controllers\uld\UldController::class, 'viewSacpostaux']);

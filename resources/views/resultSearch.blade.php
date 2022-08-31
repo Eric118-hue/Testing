@@ -178,8 +178,8 @@
                     <th scope="col" style="width: 60px; text-align:center;" >Weight</th>
                   </tr>
                   </thead>
-                @foreach ($ulds as $uld)
-                  <tbody id="results">
+                @foreach ($res as $uld)
+                  <tbody>
                 
                     <tr >
                         <th id="remove" scope="row" >{{ $uld->date }}</th>
@@ -205,5 +205,3 @@
     
 @endsection
 
-
-                     

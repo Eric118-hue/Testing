@@ -8,7 +8,7 @@
 <body>
     <h1>{{ $ulds->name }}</h1>
     @forelse ($ulds->sacpostauxs as $sac)
-        <li>{{ $sac['name'] }}</li>
+        <li>{{ $sac['name'] }}</li> 
     @empty
         
     @endforelse
