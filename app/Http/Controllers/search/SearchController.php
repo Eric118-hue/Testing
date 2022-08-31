@@ -17,4 +17,9 @@ class SearchController extends Controller
         
       return view('resultSearch', compact('res'));
     }
+
+    public function downSearh(){
+        return Excel::download(new ExportController, 'searchdown.xlsx');
+    }
+
 }

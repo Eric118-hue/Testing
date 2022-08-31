@@ -23,9 +23,14 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/export', [App\Http\Controllers\HomeController::class, 'export'])->name('export');
+Route::get('/import', [App\Http\Controllers\HomeController::class, 'export'])->name('import');
+Route::get('/export', [App\Http\Controllers\ExportController::class, 'index'])->name('export');
+Route::post('/export/down', [App\Http\Controllers\ExportController::class, 'importUld'])->name('exportUld');
+
 Route::get('/down', [App\Http\Controllers\HomeController::class, 'exportExcel'])->name('downExcel');
 Route::post('/searchNuld', [App\Http\Controllers\search\SearchController::class, 'searchNuld'])->name('searchNuld');
+Route::post('/searchNuld/down', [App\Http\Controllers\search\SearchController::class, 'downSearh'])->name('downSearchUld');
+
 Auth::routes();
 
 Route::get('/uld', [App\Http\Controllers\uld\UldController::class, 'viewSacpostaux']);

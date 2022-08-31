@@ -33,7 +33,7 @@ class HomeController extends Controller
     {
         $ulds = Uld::all();
         $sacPost = SacPostaux::all();
-        return view('export',compact('ulds','sacPost'));
+        return view('import',compact('ulds','sacPost'));
     }
 
     public function exportExcel(){
