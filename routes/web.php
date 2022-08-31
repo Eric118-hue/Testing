@@ -29,7 +29,7 @@ Route::post('/export/down', [App\Http\Controllers\ExportController::class, 'impo
 
 Route::get('/down', [App\Http\Controllers\HomeController::class, 'exportExcel'])->name('downExcel');
 Route::post('/searchNuld', [App\Http\Controllers\search\SearchController::class, 'searchNuld'])->name('searchNuld');
-Route::post('/searchNuld/down', [App\Http\Controllers\search\SearchController::class, 'downSearh'])->name('downSearchUld');
+Route::get('/searchNuld/down', [App\Http\Controllers\search\SearchController::class, 'downSearh'])->name('downSearchUld');
 
 Auth::routes();
 

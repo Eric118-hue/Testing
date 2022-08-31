@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Uld;
+use App\Http\Controllers\excel\ExportController;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SearchController extends Controller
 {
