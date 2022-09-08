@@ -10,6 +10,35 @@ class Uld extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+
+        'date',
+
+        'hour',
+
+        'Origine',
+
+        'ActualArrival',
+
+        'Registre',
+
+        'MRDLocation',
+
+        'Handler',
+
+        'MRDLabel',
+
+        'RegistCarrier',
+
+        'RegistFlight',
+
+        'AttributedCarrier',
+
+        'AttributedReceptacles',
+
+        'Weight'
+    ];
     protected $table = 'ulds';
     protected $primaryKey = 'id';
 

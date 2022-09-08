@@ -22,6 +22,8 @@ CREATE TABLE ulds(
     AttributedCarrier VARCHAR(10),
     AttributedReceptacles VARCHAR(10),
     Weight DOUBLE NOT NULL,
+    updated_at DATETIME,
+    created_at DATETIME
     PRIMARY KEY( id),
    
     )

@@ -15,7 +15,7 @@
                           </select>
                     </div>
                 </div>
-            </div> zs
+            </div>
             
             <div class="p-2 bd-highlight">
                 <div class="form-group d-flex align-items-center ">
@@ -150,7 +150,7 @@
                 <p>Poids total: 78</p>
             </div>
             <div class="mt-3- ml-5">
-                <a href="{{ route('downSearchUld') }}">
+                <a href="{{ route('downExcel') }}">
                     <button type="button" class="btn btn-success"><i class="fas fa-file-excel"></i>Télécharger</button>
                 </a>
             </div>
@@ -178,8 +178,8 @@
                     <th scope="col" style="width: 60px; text-align:center;" >Weight</th>
                   </tr>
                   </thead>
-                @foreach ($res as $uld)
-                  <tbody>
+                @foreach ($ulds as $uld)
+                  <tbody id="results">
                 
                     <tr >
                         <th id="remove" scope="row" >{{ $uld->date }}</th>
@@ -205,3 +205,5 @@
     
 @endsection
 
+
+                     

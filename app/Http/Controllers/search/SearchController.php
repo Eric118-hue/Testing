@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Uld;
+use App\Http\Controllers\excel\ExportController;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SearchController extends Controller
 {
@@ -17,4 +19,9 @@ class SearchController extends Controller
         
       return view('resultSearch', compact('res'));
     }
+
+    public function downSearh(){
+        return Excel::download(new ExportController, 'searchdown.xlsx');
+    }
+
 }

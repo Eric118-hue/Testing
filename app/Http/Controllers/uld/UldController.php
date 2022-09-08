@@ -52,10 +52,10 @@ class UldController extends Controller
      */
     public function show($id)
     {
-        $uld = Uld::all();
+    
         $ulds = Uld::find($id);
 
-        return view('sac')->compact('uld', 'ulds');
+        return view('sac', compact('ulds'));
     }
 
     /**
@@ -66,14 +66,14 @@ class UldController extends Controller
      */
     public function edit($id)
     {
-        //
+        // ito zao d ef ataon erreur f ts met sauvena 
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param   int  $id 
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
